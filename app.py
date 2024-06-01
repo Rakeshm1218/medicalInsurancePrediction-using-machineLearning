@@ -37,7 +37,7 @@
 
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -84,15 +84,12 @@ if st.button("Predict"):
         # Prepare input data
         input_data = np.array([age_input, sex_val, bmi_input, children_input, smoker_val, region_val]).reshape(1, -1)
 
-        # Make prediction
-        if input_data[0] == 0:
-            st.write("Please enter valid input values")
-        else:    
-           prediction = lg.predict(input_data)
-           prediction_rounded = round(prediction[0])
-           print(input_data)
-            # Display result
-           st.write("Medical Insurance for this person is:", prediction_rounded)
+        # Make prediction   
+        prediction = lg.predict(input_data)
+        prediction_rounded = round(prediction[0])
+        print(input_data)
+        # Display result
+        st.write("Medical Insurance for this person is:", prediction_rounded)
     except ValueError:
         st.write("Please enter valid input values")
         

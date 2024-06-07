@@ -68,7 +68,7 @@ st.title("Medical Insurance Prediction")
 # Input fields for all features
 age_input = st.number_input("Age", min_value=0, step=1, format="%d")
 sex_input = st.selectbox("Sex", ["male", "female"])
-bmi_input = st.number_input("BMI  (Value from 0 to 30)")
+bmi_input = st.number_input("BMI  (Value from 0 to 100)")
 children_input = st.number_input("Number of Children", min_value=0, max_value=10, step=1)
 smoker_input = st.selectbox("Smoker", ["yes", "no"])
 region_input = st.selectbox("Region", ["southeast", "southwest", "northwest", "northeast"])

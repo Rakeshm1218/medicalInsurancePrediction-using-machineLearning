@@ -72,6 +72,7 @@ bmi_input = st.number_input("BMI  (Value from 0 to 100)")
 children_input = st.number_input("Number of Children", min_value=0, max_value=10, step=1)
 smoker_input = st.selectbox("Smoker", ["yes", "no"])
 region_input = st.selectbox("Region", ["southeast", "southwest", "northwest", "northeast"])
+Insurance = st.number_input("Insurance to be claimed", min_value=0, step=1, format="%d", placeholder="min 10 lakhs")
 
 # Convert categorical variables to numerical values
 sex_val = 0 if sex_input == "male" else 1
